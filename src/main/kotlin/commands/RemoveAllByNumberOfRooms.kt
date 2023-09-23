@@ -11,7 +11,4 @@ class RemoveAllByNumberOfRooms : Command() {
     override fun writeString() {
         println("Удалить все с числом комнат")
     }
-    fun removeByRooms(collection: HashSet<Flat>, numberOfRooms: Int){
-        collection.removeIf { it.numberOfRooms == numberOfRooms}
-    }
 }

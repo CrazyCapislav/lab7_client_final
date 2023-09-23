@@ -14,6 +14,3 @@ class Coordinates (
         return "Coordinates(x=$x, y=$y)"
     }
 }
-
-//x Поле не может быть null
-//y Значение поля должно быть больше -566

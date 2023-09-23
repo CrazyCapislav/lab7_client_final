@@ -4,9 +4,6 @@ import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement
 
-/**
- * Абстрактный класс для пакетов данных.
- */
 @JacksonXmlRootElement(localName = "PackageData")
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

@@ -13,9 +13,4 @@ class RemoveLower : Command() {
         println("Удалить id ниже чем")
     }
 
-    fun removeLower(collection: HashSet<Flat>, id: Long, arrayId: MutableList<Long>) {
-        collection.removeIf { it.id < id }.also {
-            if (it) arrayId.remove(id)
-        }
-    }
 }

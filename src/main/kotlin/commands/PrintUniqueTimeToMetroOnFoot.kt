@@ -15,7 +15,4 @@ class PrintUniqueTimeToMetroOnFoot : Command() {
     override fun writeString() {
         println("Уникальные расстояния до метро")
     }
-    fun uniqueTime(collection: HashSet<Flat>): String {
-        return collection.map { it.timeToMetroOnFoot }.distinct().toString()
-    }
 }

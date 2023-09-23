@@ -3,12 +3,11 @@ package models
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement
-
-import java.time.LocalDateTime
+import java.sql.Timestamp
 
 @JacksonXmlRootElement(localName = "flat")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-class Flat (
+class Flat(
     @JacksonXmlProperty(localName = "id")
     val id: Long = 0,
     @JacksonXmlProperty(localName = "name")
@@ -28,13 +27,12 @@ class Flat (
     @JacksonXmlProperty(localName = "house")
     var house: House? = null,
     @JacksonXmlProperty(localName = "creationDate")
-    var creationDate: String = LocalDateTime.now().toString()
+    var creationDate: Timestamp? = null,
+    @JacksonXmlProperty(localName = "username")
+    var username: String? = null
 ) {
     override fun toString(): String {
-        return "$name, $creationDate, $id, $coordinates, $area, $numberOfRooms, $livingSpace, $timeToMetroOnFoot, $furnish, $house"
+        return "$username $creationDate $id $name $coordinates $area $numberOfRooms $livingSpace $timeToMetroOnFoot $furnish $house"
     }
 
-    fun showDate() {
-        println(creationDate)
-    }
 }

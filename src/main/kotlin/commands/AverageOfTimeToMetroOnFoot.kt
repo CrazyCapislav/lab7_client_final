@@ -11,8 +11,4 @@ class AverageOfTimeToMetroOnFoot : Command() {
     override fun writeString() {
         println("Среднее время до метро")
     }
-    fun averageMetro(collection: HashSet<Flat>): String {
-        return collection.map { it.timeToMetroOnFoot }.average().toString()
-
-    }
 }
